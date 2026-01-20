@@ -1,8 +1,8 @@
-on: [pull_request]
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 permissions:
-  # Require write permission to Fetch an OIDC token (required for federated credential) and write it
-  # It will be automatically used on actions / cli that needs it
   id-token: write
 
 jobs:
