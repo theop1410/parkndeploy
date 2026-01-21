@@ -55,6 +55,6 @@ jobs:
 
   call_deploy:
     needs: [build_frontend, build_backend]
-    uses: cd.yml
+    uses: ./.github/workflows/cd.yml
     secrets: inherit
 
