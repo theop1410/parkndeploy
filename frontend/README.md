@@ -2,6 +2,10 @@
 
 `ParkNDeploy Frontend` is a Single Page Application (SPA) build with [React](https://fr.react.dev/) & [Vite](https://vite.dev/).
 
+## Version 
+
+Current app version : 1.1.7
+
 ## Features
 
 As simple is the keyword of this course, the UI is showing a basic Parking galery that you could filter with the name through a search bar.
