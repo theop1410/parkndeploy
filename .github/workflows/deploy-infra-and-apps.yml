@@ -21,15 +21,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name : Get git tag version
-      run: |
-       VERSION=$(git describe --tags --always) echo "VERSION=$VERSION" >> $GITHUB_ENV
-
     - name: Build the app
       run: npm install && npm run build
       working-directory: ./frontend
       env:
-       VITE_APP_VERSION: ${{ env.VERSION }}
+       VITE_APP_VERSION: ${{ github.ref_name }}
 
     - name: Upload Frontend Artifact
       uses: actions/upload-artifact@v4
