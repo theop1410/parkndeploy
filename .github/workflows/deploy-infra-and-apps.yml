@@ -31,8 +31,6 @@ jobs:
       env:
        VITE_APP_VERSION: ${{ env.VERSION }}
 
-
-
     - name: Upload Frontend Artifact
       uses: actions/upload-artifact@v4
       with:
@@ -154,7 +152,7 @@ jobs:
       uses: azure/static-web-apps-deploy@v1
       with:
         azure_static_web_apps_api_token: ${{ env.SWA_DEPLOYMENT_TOKEN }}
-        app_location:   
+        app_location: ./downloaded-frontend
         action: upload
         skip_app_build: true
         skip_api_build: true
