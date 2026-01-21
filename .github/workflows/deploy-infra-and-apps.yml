@@ -94,7 +94,9 @@ jobs:
         resourceGroupName: ${{ env.AZURE_RG_NAME }}
 
   deploy_backend:
+    runs-on: ubuntu-latest
     needs: deploy_infrastructure
+    environment: production
 
     steps:
     - name: Download Backend Artifact
@@ -117,7 +119,9 @@ jobs:
         package: ./downloaded-backend # Path to the previously published app
 
   deploy_frontend:
+    runs-on: ubuntu-latest
     needs: deploy_infrastructure
+    environment: production
 
     steps:
     - name: Download Frontend Artifact
